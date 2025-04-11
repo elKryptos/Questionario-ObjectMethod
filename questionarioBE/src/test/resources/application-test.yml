@@ -1,0 +1,23 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show_sql: true
+    properties:
+      hibernate:
+      format_sql: true
+      use_sql_comments: true
+      dialect: org.hibernate.dialect.H2Dialect
+  datasource:
+    url: jdbc:h2:mem:basedb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driver-class-name: org.h2.Driver
+  h2:
+    console:
+      enabled: true
+  sql:
+    init:
+      platform: h2
+      schema-locations: classpath:/dbH2/00-createSchema.sql
+
+private:
+  key: s0n0V3r4m3nt3D1ff1c1l3D4D4cr1pt4r3!!

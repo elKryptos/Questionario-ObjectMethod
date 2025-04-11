@@ -1,0 +1,102 @@
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 85vh; /* Riempie l'altezza della pagina */
+}
+
+.login {
+    background-color: #ffffff; /* Sfondo bianco */
+    border-radius: 8px; /* Bordi arrotondati */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombra leggera */
+    padding: 20px 30px; /* Spaziatura interna */
+    width: 40%; /* Larghezza del modulo */
+    max-width: 500px; /* Limita la larghezza massima */
+    display: flex;
+    flex-direction: column; /* Layout verticale */
+    gap: 15px; /* Spaziatura tra gli elementi */
+}
+
+.login p {
+    text-align: center; /* Testo centrato */
+    font-size: 1.5rem; /* Dimensione del testo */
+    font-weight: bold; /* Testo in grassetto */
+    margin-bottom: 20px; /* Spaziatura sotto il titolo */
+    color: #333333; /* Colore del testo */
+}
+
+.login label {
+    font-weight: bold; /* Testo dei label in grassetto */
+    margin-bottom: 5px; /* Spaziatura sotto il label */
+    color: #555555; /* Colore del testo */
+}
+
+.login input {
+    width: 100%; /* Occupa tutta la larghezza */
+    padding: 10px; /* Spaziatura interna */
+    border: 1px solid #cccccc; /* Bordo grigio chiaro */
+    border-radius: 4px; /* Bordi arrotondati */
+    font-size: 1rem; /* Dimensione del testo */
+}
+
+.login input:focus {
+    outline: none; /* Rimuove il bordo blu predefinito */
+    border-color: #007bff; /* Cambia il colore del bordo */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Effetto di focus */
+}
+
+.login button {
+    padding: 10px 15px; /* Spaziatura interna */
+    color: #ffffff; /* Testo bianco */
+    border: none; /* Rimuove il bordo */
+    border-radius: 10px; /* Bordi arrotondati */
+    font-size: 1rem; /* Dimensione del testo */
+    cursor: pointer; /* Cambia il cursore */
+    transition: background-color 0.3s ease; /* Transizione al passaggio del mouse */
+    margin: 0 auto;
+    background-color: #007bff;
+    width: 40%;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Allinea il pulsante a destra */
+}
+
+.links a{
+    color: #007bff;
+    margin: 0 auto;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.links button:hover {
+    background-color: #218838; /* Verde più scuro al passaggio del mouse */
+}
+
+.messaggi {
+    width: 40%; /* Stessa larghezza del modulo */
+    max-width: 500px; /* Limita la larghezza massima */
+    text-align: center; /* Testo centrato */
+    margin-bottom: 20px; /* Spaziatura sotto i messaggi */
+}
+
+.messaggi h3 {
+    font-size: 1rem; /* Dimensione del testo */
+    margin: 5px 0; /* Spaziatura sopra e sotto */
+    padding: 10px; /* Spaziatura interna */
+    border-radius: 8px; /* Bordi arrotondati */
+}
+
+.messaggi .errore {
+    color: #ffffff; /* Testo bianco */
+    background-color: #dc3545; /* Rosso per errori */
+}
+
+@media (max-width: 768px) {
+    .login {
+        width: 90%; /* Riduce la larghezza su schermi piccoli */
+    }
+}

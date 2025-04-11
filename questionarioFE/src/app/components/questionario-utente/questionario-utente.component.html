@@ -1,0 +1,25 @@
+<div>
+    <!-- Domande -->
+    <div *ngFor="let domanda of domande.slice().reverse()" class="lista">
+      <p>
+      {{ domanda.testoDomanda }}
+      </p>
+      <!-- Risposte -->
+      <div *ngFor="let risposte of domanda.risposte; let i = index" class="risposte">
+        <label>
+          <input 
+          type="radio" 
+          [name]="'risposta' + domanda.domandaId" 
+          [value]="risposte.rispostaId" 
+          [(ngModel)]="domanda.selezione">
+          {{ risposte.testoRisposta }}
+        </label>
+      </div>
+      <div class="salva">
+        <button (click)="salvaRisposte(domanda)">Salva</button>
+      </div>
+    </div>
+  <div class="salva">
+    <button (click)=" inviaRisposte()">Conferma e invia</button>
+  </div>
+</div>

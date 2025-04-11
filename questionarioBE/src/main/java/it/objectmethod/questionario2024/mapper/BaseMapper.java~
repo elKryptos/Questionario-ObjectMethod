@@ -1,0 +1,4 @@
+package it.objectmethod.questionario2024.mapper;
+
+public interface BaseMapper {
+}

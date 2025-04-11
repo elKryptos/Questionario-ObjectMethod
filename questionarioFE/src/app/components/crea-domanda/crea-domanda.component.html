@@ -1,0 +1,46 @@
+<div class="response">
+    <h3 *ngIf="error" class="errore">{{error}}</h3>
+    <p *ngIf="message" class="successo">{{message}}</p>
+</div>
+<div class="domanda">
+    <form (submit)="creaDomanda()" type="submit" class="creaDomanda">
+        <p>Aggiungi Domanda</p>
+        <label class="dati">Testo Domanda</label>
+        <input
+            type="text"
+            id="testo_domanda"
+            name="testo_domanda"
+            [(ngModel)]="domanda.testoDomanda"
+            required
+            placeholder="Inserisci domanda">
+
+        <label class="dati">Risposta</label>
+        <div class="riposta" *ngFor="let risposta of domanda.risposte; let i = index">
+            <input
+              type="text"
+              [id]="'risposta' + i"
+              [name]="'risposta' + i"
+              [(ngModel)]="domanda.risposte[i].testoRisposta"
+              required
+              placeholder="Inserisci risposta" >
+            <input
+            type="checkbox"
+            [id]="'corretta' + i"
+            [name]="'corretta' + i"
+            [(ngModel)]="domanda.risposte[i].corretta">
+            <img
+              src="assets/rimuovere.svg"
+              alt="Rimuovi"
+              (click)="delete(i)">
+        </div>
+          
+        <div class="aggiungi">
+            <h4 (click)="add()">Aggiungi riposta</h4>
+            <img src="assets/aggiungi.png" (click)="add()" alt="aggiungi">
+        </div>
+        <div class="links">
+            <button>Salva</button>
+        </div>
+    </form>
+</div>
+  

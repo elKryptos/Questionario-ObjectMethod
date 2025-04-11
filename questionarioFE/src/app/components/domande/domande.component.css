@@ -1,0 +1,188 @@
+.crea {
+    margin-bottom: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.crea a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: #007bff;
+    border: 1px solid #007bff;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.crea a:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.crea p {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    color: #ff4d4d; /* Colore rosso per messaggi di delete */
+    font-weight: bolder;
+}
+
+/* Lista delle domande */
+.lista {
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 15px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Domande principali */
+.lista > p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #e9ecef;
+    border-left: 4px solid #007bff;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between; /* Testo a sinistra, bottoni a destra */
+    align-items: center;
+}
+
+/* Contenitore dei bottoni */
+.lista > p .button-container {
+    display: flex; /* Bottoni affiancati */
+    gap: 0; /* Nessuno spazio extra */
+}
+
+/* Bottoni per eliminare e modificare */
+.lista > p button {
+    font-size: 0.9rem;
+    padding: 5px 10px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 10px; /* Piccolo spazio tra i due bottoni */
+}
+
+.lista > p button:first-of-type {
+    background-color: #e66c6c; /* Elimina */
+}
+
+.lista > p button:first-of-type:hover {
+    background-color: #ff0000;
+}
+
+.lista > p button:last-of-type {
+    background-color: #007bff; /* Modifica */
+}
+
+.lista > p button:last-of-type:hover {
+    background-color: #0056b3;
+}
+
+/* Contenitore delle risposte */
+.risposte {
+    margin-left: 20px;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+}
+
+/* Stile per le risposte */
+.risposte label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.risposte input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* Colore di sfondo rosso per la scheda in stato di conferma */
+.lista.conferma {
+    background-color: #ffe6e6;
+    border: 1px solid #ff4d4d;
+    box-shadow: 0 4px 6px rgba(255, 77, 77, 0.2);
+}
+  
+/* Contenitore della conferma */
+.conferma-container {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #ffcccc;
+    border-radius: 4px;
+    text-align: center;
+ }
+  
+.conferma-container p {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ff4d4d;
+}
+  
+.conferma-container button {
+    font-size: 0.9rem;
+    padding: 5px 10px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 5px;
+}
+  
+.conferma-container button:first-of-type {
+    background-color: #ff4d4d; /* Ok */
+}
+  
+.conferma-container button:first-of-type:hover {
+    background-color: #ff0000;
+}
+  
+.conferma-container button:last-of-type {
+    background-color: #007bff; /* Annulla */
+}
+  
+.conferma-container button:last-of-type:hover {
+    background-color: #0056b3;
+}
+
+.messaggi {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: fit-content; /* Stessa larghezza del modulo */
+    max-width: 500px; /* Limita la larghezza massima */
+    text-align: center; /* Testo centrato */
+     margin: 0 auto 20px; /* Centra orizzontalmente con margine sotto */
+}
+
+.messaggi p {
+    font-size: 1rem; /* Dimensione del testo */
+    margin: 5px 0; /* Spaziatura sopra e sotto */
+    padding: 10px; /* Spaziatura interna */
+    border-radius: 8px; /* Bordi arrotondati */
+}
+
+.messaggi .delete {
+    color: #ffffff; /* Testo bianco */
+    background-color: #dc3545; /* Rosso per errori */
+}

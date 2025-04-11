@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Exo 2', sans-serif;
+    /* background-color: #70a5cd; */
+    background-color: #000030; /* Colore di sfondo principale */
+    background-image: url("https://images.unsplash.com/photo-1536152470836-b943b246224c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1476&q=80");
+    background-size: cover; /* L'immagine copre l'intera area */
+    background-position: center; /* Posiziona l'immagine al centro */
+    background-repeat: no-repeat; /* Evita che l'immagine si ripeta */
+    margin: 0; /* Rimuove il margine del body */
+    padding: 0; /* Rimuove il padding del body */
+    height: 100vh; /* Imposta l'altezza a 100% della finestra */
+    width: 100%; /* Larghezza al 100% della finestra */
+    overflow-x: hidden; /* Nasconde la barra di scorrimento orizzontale */
+}

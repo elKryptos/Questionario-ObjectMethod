@@ -1,0 +1,21 @@
+<section>
+    <h1>Lista Utenti</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome Utente</th>
+                    <th>Email</th>
+                    <th>Compleanno</th>
+                    <th>Indirizzo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let utenti of utente">
+                    <td>{{utenti.nomeUtente}}</td>
+                    <td>{{utenti.email}}</td>
+                    <td>{{utenti.compleanno}}</td>
+                    <td>{{utenti.indirizzo}}</td>
+                </tr>
+            </tbody>
+        </table>
+</section>

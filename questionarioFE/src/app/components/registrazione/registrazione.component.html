@@ -1,0 +1,31 @@
+<div class="registrazione-container">
+    
+    <div class="messaggi">
+        <h3 *ngIf="messaggioVisibile" class="errore">{{error}}</h3>
+        <h3 *ngIf="message" class="successo">{{message}}</h3>
+    </div>
+
+    <form class="registrazione">
+        <p>Registrazione</p>
+        <label for="username" class="dati">Nome</label>
+        <input type="text" id="nomeUtente" name="nomeUtente" [(ngModel)]="utente.nomeUtente" required>
+    
+        <label for="email" class="dati">Email</label>
+        <input type="email" id="email" name="email" [(ngModel)]="utente.email" required>
+    
+        <label for="password" class="dati">Password</label>
+        <input type="password" id="password" name="password" [(ngModel)]="utente.password" required>
+    
+        <label for="date" class="dati">Data di nascita</label>
+        <input type="date" id="eta" name="eta" [(ngModel)]="utente.compleanno" required>
+        
+        <label for="text" class="dati">Indirizzo</label>
+        <input type="text" id="indirizzo" name="indirizzo" [(ngModel)]="utente.indirizzo" required>
+    
+        <div class="links">
+            <button type="submit" (click)="registrazione()">Salva</button>
+            <button type="button" (click)="indietro()">Indietro</button>
+        </div>
+    </form>
+</div>
+

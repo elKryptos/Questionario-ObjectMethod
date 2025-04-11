@@ -1,0 +1,39 @@
+<header>
+    <div class="logo-container" routerLink="home">
+        <img src="assets/logo.jpg" alt="" class="logo">
+        <h1>Questionario</h1>
+    </div>
+
+    <!-- Menu Hamburger -->
+    <div class="menu-icon" (click)="toggleMenu()">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+
+    <nav class="navigation"  [class.active]="menuOpen">
+        <a *ngIf="isLoggedIn && isAdmin" routerLink="listaUtenti" routerLinkActive="active-link" (click)="closeMenu()">Utenti</a>
+        <a *ngIf="isLoggedIn && isAdmin" routerLink="domande" routerLinkActive="active-link" (click)="closeMenu()">Domande</a>
+        <a *ngIf="isLoggedIn && isAdmin" routerLink="crea" routerLinkActive="active-link" (click)="closeMenu()">Crea</a>
+        <!-- <a *ngIf="isLoggedIn && isAdmin" routerLink="home" routerLinkActive="active-link" (click)="closeMenu()">Questionario</a> -->
+        <a *ngIf="!isLoggedIn" routerLink="login" routerLinkActive="active-link" (click)="closeMenu()">Login</a>
+        <a *ngIf="isLoggedIn" (click)="onLogout()">Logout</a>
+    </nav>
+</header>
+
+<!-- Toast Container Globale -->
+<main>
+    <div class="toast-container position-fixed top-0 start-50 translate-middle-x p-3" style="z-index: 1055;">
+        <div *ngFor="let toast of toasts" class="toast show" [class.bg-success]="toast.type === 'success'" [class.bg-danger]="toast.type === 'error'" [class.bg-warning]="toast.type === 'warning'" role="alert" aria-live="assertive" aria-atomic="true" >
+            <div class="toast-body d-flex justify-content-center align-items-center">
+                <strong>{{ toast.message }}</strong>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="isLoading" class="loading-overlay">
+        <div class="spinner"></div>
+    </div>
+
+    <router-outlet></router-outlet>
+</main>

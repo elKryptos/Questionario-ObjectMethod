@@ -1,0 +1,73 @@
+
+
+/* Sezione principale */
+section {
+    width: 90%;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.726);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Effetto ombra elegante */
+    border-radius: 8px; /* Angoli arrotondati */
+}
+
+/* Titolo */
+section h1 {
+    text-align: center;
+    color: #333; /* Colore testo elegante e leggibile */
+    margin-bottom: 1.5rem;
+}
+
+/* Tabella */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+/* Intestazioni */
+table thead tr {
+    background-color: #007BFF; /* Blu aziendale */
+    color: #fff;
+}
+
+table th {
+    padding: 12px;
+    text-align: left;
+    font-weight: bold;
+    border-bottom: 2px solid #0056b3; /* Linea di separazione elegante */
+}
+
+/* Righe della tabella */
+table tbody tr {
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s ease;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #767676b0; /* Riga alternata chiara */
+}
+
+table tbody tr:hover {
+    background-color: #037f7fd7; /* Evidenziazione riga al passaggio del mouse */
+}
+
+/* Celle */
+table td {
+    padding: 10px;
+    color: rgb(3, 1, 1);
+}
+
+/* Per dispositivi mobili */
+@media (max-width: 768px) {
+    section {
+        padding: 1rem;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+
+    table th, table td {
+        padding: 8px;
+    }
+}

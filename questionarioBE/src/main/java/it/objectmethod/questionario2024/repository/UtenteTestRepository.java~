@@ -1,0 +1,4 @@
+package it.objectmethod.questionario2024.repository;
+
+public interface UtenteTestRepository {
+}

@@ -1,0 +1,90 @@
+.container{
+  background: rgba(14, 38, 147, 0.9);
+  width: 350px;
+  height: 60%;
+  margin-top: 4rem;
+  gap: 2rem;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.container .dashboard{
+  background: linear-gradient(90deg, var(--lightRoyalBlue) 0%, var(--lightSlateBlue) 100%);
+  border-radius: 20px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+.dashboard .dashboard_header{
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: lavender;
+}
+.dashboard .dashboard_score {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 50%;
+  background: violet;
+  margin-bottom: 20px;
+}
+.dashboard_score .score-number{
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+}
+.dashboard_score .score-text{
+  font-size: 15px;
+  font-weight: 400;
+  color: lavender;
+}
+.dashboard .dashboard__grade{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  height: auto;
+}
+.dashboard_grade .grade-text{
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: white;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+.dashboard_grade .grade-description{
+  font-size: 1rem;
+  font-weight: 400;
+  color: lavender;
+  letter-spacing: 2px;
+  line-height: 1.5;
+}
+
+.continue {
+  width: 100%;
+  height: 70px;
+  font-size: 1.3em;
+  font-weight: 600;
+  color: white;
+  margin-top: 10px;
+  border-radius: 50px;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: darkgray;
+  transition: backgroundColor .9s ease-in-out;
+}
+.continue:hover{
+  background: violet;
+}

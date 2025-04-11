@@ -1,0 +1,19 @@
+package it.objectmethod.questionario2024.mapper;
+
+import it.objectmethod.questionario2024.dto.UtenteDto;
+import it.objectmethod.questionario2024.entity.Utente;
+import org.mapstruct.Builder;
+import org.mapstruct.Mapper;
+
+import java.util.List;
+
+@Mapper(componentModel = "spring", builder = @Builder(disableBuilder = true))
+public interface UtenteMapper extends BaseMappingMethods<UtenteDto, Utente> {
+    UtenteDto toDto(Utente entity);
+
+    Utente toEntity(UtenteDto dto);
+
+    List<UtenteDto> toDtoList(List<Utente> entityList);
+
+    List<Utente> toEntityList(List<UtenteDto> dtoList);>
+}

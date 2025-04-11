@@ -1,0 +1,38 @@
+package it.objectmethod.questionario2024.entity;
+
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.Date;
+import java.util.List;
+
+@Data
+@Entity
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@Table(name = "utente")
+public class Utente {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "utente_id")
+    private Long utenteId;
+    @Column(name = "nome_utente")
+    private String nomeUtente;
+    @Column(name = "email")
+    private String email;
+    @Column(name = "password")
+    private String password;
+    @Column(name = "compleanno")
+    private Date compleanno;
+    @Column(name = "indirizzo")
+    private String indirizzo;
+    @Column(name = "is_admin")
+    private Boolean isAdmin;
+
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "utente", cascade = CascadeType.ALL)
+    private List<UtenteTest> utenteTest;
+}

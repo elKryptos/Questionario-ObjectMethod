@@ -1,0 +1,35 @@
+<div>
+  <div class="crea">
+  	<a routerLink="/crea">Crea domanda</a>
+  </div>
+
+  <div class="messaggi">
+    <p *ngIf="messaggioVisibile" class="delete">{{delete}}</p>
+  </div>
+
+  <!-- Domande -->
+  <div *ngFor="let domanda of domande.slice().reverse()" class="lista" [class.conferma]="domanda.inConferma">
+    <p>
+    {{ domanda.testoDomanda }}
+    <span class="button-container" *ngIf="!domanda.inConferma">
+      <button (click)="confermaEliminazione(domanda)">Elimina</button>
+      <button (click)="modifica(domanda)">Modifica</button>
+    </span>
+  </p>
+
+  <!-- Risposte -->
+  <div *ngFor="let risposte of domanda.risposte" class="risposte">
+    <label>
+      <input type="radio" name="risposta">
+      {{ risposte.testoRisposta }}
+    </label>
+  </div>
+
+  <!-- Conferma Eliminazione -->
+  <div *ngIf="domanda.inConferma && domanda !== domandaModificata" class="conferma-container">
+    <p>Confermi l'eliminazione?</p>
+    <button (click)="elimina(domanda)">Ok</button>
+    <button (click)="annullaEliminazione(domanda)">Annulla</button>
+  </div>
+  </div>
+</div>

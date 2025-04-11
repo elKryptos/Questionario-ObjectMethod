@@ -1,0 +1,156 @@
+/* Lista delle domande */
+.lista {
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 15px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Domande principali */
+.lista > p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #e9ecef;
+    border-left: 4px solid #007bff;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between; /* Testo a sinistra, bottoni a destra */
+    align-items: center;
+}
+
+/* Contenitore dei bottoni */
+.lista > p .button-container {
+    display: flex; /* Bottoni affiancati */
+    gap: 0; /* Nessuno spazio extra */
+}
+
+/* Bottoni per eliminare e modificare */
+.lista > p button {
+    font-size: 0.9rem;
+    padding: 5px 10px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 10px; /* Piccolo spazio tra i due bottoni */
+}
+
+.lista > p button:first-of-type {
+    background-color: #e66c6c; /* Elimina */
+}
+
+.lista > p button:first-of-type:hover {
+    background-color: #ff0000;
+}
+
+.lista > p button:last-of-type {
+    background-color: #007bff; /* Modifica */
+}
+
+.lista > p button:last-of-type:hover {
+    background-color: #0056b3;
+}
+
+/* Contenitore delle risposte */
+.risposte {
+    margin-left: 20px;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+}
+
+/* Stile per le risposte */
+.risposte label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.risposte input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* Sezione salvataggio */
+.salva {
+    display: flex;
+    align-items: center; 
+    margin-top: 10px;
+}
+
+.salva button {
+    color: #ffffff; /* Testo bianco */
+    border: none; /* Rimuove il bordo */
+    border-radius: 10px; /* Bordi arrotondati */
+    font-size: 1rem; /* Dimensione del testo */
+    cursor: pointer; /* Cambia il cursore */
+    transition: background-color 0.3s ease; /* Transizione al passaggio del mouse */
+    margin: 0 auto;
+    width: auto; /* Pulsanti con larghezza adattiva */
+    padding: 8px 15px; /* Spaziatura uniforme */
+    background-color: #28a745; /* Colore verde per "Salva" */
+}
+
+.salva button:hover {
+    background-color: #218838; /* Verde più scuro al passaggio del mouse */
+}
+
+/* Responsività per schermi più piccoli */
+@media (max-width: 768px) {
+    /* Domande principali */
+    .lista > p {
+        font-size: 1rem; /* Ridurre la dimensione del testo */
+        flex-direction: column; /* Impilare testo e bottoni */
+        align-items: flex-start;
+    }
+
+    /* Ridurre la distanza tra le risposte */
+    .risposte {
+        margin-left: 10px; /* Aggiungi margine più piccolo per risposte */
+        margin-top: 5px;
+    }
+
+    .risposte label {
+        font-size: 0.9rem; /* Ridurre la dimensione del testo per risposte */
+    }
+
+    /* Bottone salva */
+    .salva {
+        justify-content: center; /* Centra il bottone */
+        margin-top: 20px;
+    }
+
+    /* Bottone di conferma */
+    .salva button {
+        font-size: 0.9rem; /* Ridurre la dimensione del testo per il bottone */
+        width: 100%; /* Bottone a larghezza piena su mobile */
+        padding: 12px 15px;
+    }
+}
+
+/* Responsività per schermi molto piccoli (mobile) */
+@media (max-width: 480px) {
+    /* Rimpicciolire la dimensione della lista */
+    .lista {
+        padding: 10px;
+    }
+
+    /* Modifica della dimensione dei bottoni di domanda */
+    .lista > p button {
+        font-size: 0.8rem; /* Rimpicciolire i bottoni */
+        padding: 4px 8px;
+    }
+
+    .risposte label {
+        font-size: 0.8rem; /* Ridurre il font per le risposte */
+    }
+}

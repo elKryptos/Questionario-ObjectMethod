@@ -1,0 +1,21 @@
+<div class="login-container">
+    <!-- <div class="messaggi">
+        <h3 *ngIf="messaggioVisibile" class="errore">{{message}}</h3>
+    </div> -->
+    
+    <form class="login">
+        <p>Login</p>
+        <label for="email" class="dati">Email</label>
+        <input type="email" id="email" name="email" [(ngModel)]="auth.email" required>
+    
+        <label for="password" class="dati">Password</label>
+        <input type="password" id="password" name="password" [(ngModel)]="auth.password" required>
+
+        <button type="submit" (click)="onLogin()">Login</button>
+
+        <div class="links">
+            <a (click)="registrati()" role="button">Registrati</a>
+            <a (click)="recupera()" role="button">Password dimenticata</a>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,167 @@
+.response {
+    margin: 20px auto;
+    text-align: center;
+    height: fit-content;
+    width: 40%; /* Stessa larghezza del modulo */
+    max-width: 200px; /* Limita la larghezza massima */
+    
+}
+
+.response .errore {
+    color: white;
+    background-color: red;
+    border-radius: 8px;
+    font-size: 1rem;
+    margin: 5px 0; /* Spaziatura sopra e sotto */
+    padding: 10px;
+}
+  
+.response .successo {
+    font-size: 1rem;
+    color: #4caf50; /* Success message color */
+}
+  
+/* Contenitore del form (senza bordi o ombre) */
+.domanda {
+    width: 100%;
+    max-width: 96%;
+    margin: 0 auto;
+    padding: 20px;
+    display: flexbox;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+
+}
+  
+/* Stile per il titolo del form */
+.domanda p {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+    
+}
+  
+/* Stile per le label */
+.dati {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.domanda input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+  
+.domanda input[type="text"]:focus {
+    outline: none;
+    border-color: #6200ee;
+    box-shadow: 0 0 5px rgba(98, 0, 238, 0.2);
+}
+
+/* Contenitore della risposta */
+.riposta {
+    display: flex; /* Flexbox per affiancare input e immagine */
+    align-items: center; /* Allinea verticalmente l'input e l'immagine */
+    margin-bottom: 20px;
+}
+
+/* Input della risposta */
+.riposta input[type="text"] {
+    width: 100%; /* L'input occupa tutta la larghezza disponibile */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    margin-right: 10px; /* Spazio tra input e immagine */
+}
+
+/* Focus sull'input */
+.riposta input[type="text"]:focus {
+    outline: none;
+    border-color: #6200ee;
+    box-shadow: 0 0 5px rgba(98, 0, 238, 0.2);
+}
+
+/* Immagine di rimuovere */
+.riposta img {
+    width: 2rem; /* Puoi regolare la dimensione dell'immagine */
+    cursor: pointer; /* Mostra il cursore a mano quando passa sopra l'immagine */
+    margin-bottom: 15px;
+}
+
+/* Stile per i bottoni */
+.domanda button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #6200ee;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  
+.domanda button:hover {
+    background-color: #218838;
+}
+  
+/* Stile per il contenitore dei link */
+.domanda .links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+  
+.domanda .links button {
+    width: fit-content;
+}
+
+.aggiungi {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin: auto;
+}
+
+h4 {
+    margin-top: 4px;
+    margin-right: 4px;
+    cursor: pointer;
+}
+
+img {
+   width: 2rem;
+   height: fit-content; 
+   cursor: pointer;
+}
+  
+/* Responsive Design */
+@media (max-width: 480px) {
+    .domanda {
+      padding: 15px;
+    }
+  
+    .domanda button {
+      font-size: 0.9rem;
+    }
+
+    .riposta input[type="text"] {
+        width: 70%; /* Riduce la larghezza dell'input su schermi più piccoli */
+    }
+
+    .riposta img {
+        width: 1.2rem; /* Dimensione dell'immagine più piccola per schermi piccoli */
+    }
+}
+  

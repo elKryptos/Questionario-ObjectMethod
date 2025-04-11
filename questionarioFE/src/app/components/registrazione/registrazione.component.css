@@ -1,0 +1,107 @@
+.registrazione-container {
+    display: flex;
+    flex-direction: column; /* Aggiunto: layout verticale */
+    justify-content: center;
+    align-items: center;
+    height: 85vh; /* Riempie l'altezza della pagina */
+}
+
+.registrazione {
+    background-color: #ffffff; /* Sfondo bianco */
+    border-radius: 8px; /* Bordi arrotondati */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombra leggera */
+    padding: 20px 30px; /* Spaziatura interna */
+    width: 40%; /* Larghezza del modulo */
+    max-width: 500px; /* Limita la larghezza massima */
+    display: flex;
+    flex-direction: column; /* Layout verticale */
+    gap: 15px; /* Spaziatura tra gli elementi */
+}
+
+.registrazione p {
+    text-align: center; /* Testo centrato */
+    font-size: 1.5rem; /* Dimensione del testo */
+    font-weight: bold; /* Testo in grassetto */
+    margin-bottom: 20px; /* Spaziatura sotto il titolo */
+    color: #333333; /* Colore del testo */
+}
+
+.registrazione label {
+    font-weight: bold; /* Testo dei label in grassetto */
+    margin-bottom: 5px; /* Spaziatura sotto il label */
+    color: #555555; /* Colore del testo */
+}
+
+.registrazione input {
+    width: 100%; /* Occupa tutta la larghezza */
+    padding: 10px; /* Spaziatura interna */
+    border: 1px solid #cccccc; /* Bordo grigio chiaro */
+    border-radius: 4px; /* Bordi arrotondati */
+    font-size: 1rem; /* Dimensione del testo */
+}
+
+.registrazione input:focus {
+    outline: none; /* Rimuove il bordo blu predefinito */
+    border-color: #007bff; /* Cambia il colore del bordo */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Effetto di focus */
+}
+
+.registrazione button {
+    padding: 10px 15px; /* Spaziatura interna */
+    color: #ffffff; /* Testo bianco */
+    border: none; /* Rimuove il bordo */
+    border-radius: 10px; /* Bordi arrotondati */
+    font-size: 1rem; /* Dimensione del testo */
+    cursor: pointer; /* Cambia il cursore */
+    transition: background-color 0.3s ease; /* Transizione al passaggio del mouse */
+    margin: 0 auto;
+}
+
+.registrazione .links {
+    display: flex;
+    justify-content: center; /* Allinea il pulsante a destra */
+    margin-top: 10px; /* Spazio sopra i pulsanti */
+}
+
+.registrazione .links button {
+    width: 40%; /* Pulsanti con larghezza adattiva */
+    padding: 8px 15px; /* Spaziatura uniforme */
+    background-color: #28a745; /* Colore verde per "Salva" */
+    color: #ffffff; /* Testo bianco */
+}
+
+.registrazione .links button:hover {
+    background-color: #218838; /* Verde più scuro al passaggio del mouse */
+}
+
+
+.messaggi {
+    width: 40%; /* Stessa larghezza del modulo */
+    max-width: 500px; /* Limita la larghezza massima */
+    text-align: center; /* Testo centrato */
+    margin-bottom: 20px; /* Spaziatura sotto i messaggi */
+}
+
+.messaggi h3 {
+    font-size: 1rem; /* Dimensione del testo */
+    margin: 5px 0; /* Spaziatura sopra e sotto */
+    padding: 10px; /* Spaziatura interna */
+    border-radius: 5px; /* Bordi arrotondati */
+}
+
+.messaggi .errore {
+    color: #ffffff; /* Testo bianco */
+    background-color: #dc3545; /* Rosso per errori */
+}
+
+.messaggi .successo {
+    color: #ffffff; /* Testo bianco */
+    background-color: #28a745; /* Verde per successi */
+}
+
+
+@media (max-width: 768px) {
+    .registrazione {
+        width: 90%; /* Riduce la larghezza su schermi piccoli */
+    }
+}
